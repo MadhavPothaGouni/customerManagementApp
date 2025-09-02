@@ -1,13 +1,14 @@
 {
   "name": "customer-management-app",
   "version": "1.0.0",
-  "private": true,
+  "main": "server/index.js",
   "scripts": {
-    "install": "npm install --prefix server && npm install --prefix client",
-    "build": "npm run build --prefix client",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "cd client && npm install && npm run build"
   },
-  "engines": {
-    "node": "18.x"
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
   }
 }
